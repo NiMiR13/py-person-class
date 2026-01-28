@@ -8,6 +8,9 @@ class Person:
 
 
 def create_person_list(people: list[dict]) -> list[Person]:
+    # Очищаем словарь перед каждым запуском, как просит Люк
+    Person.people = {}
+
     instances = [
         Person(person_dict["name"], person_dict["age"])
         for person_dict in people
